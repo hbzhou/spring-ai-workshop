@@ -1,0 +1,5 @@
+### GET request to example server
+GET http://localhost:8080/api/ds/chat?prompt=Tell me a interesting fact about Kotlin
+
+### chat client streaming response
+GET http://localhost:8080/api/ds/stream?prompt=Tell me a interesting fact about Kotlin
