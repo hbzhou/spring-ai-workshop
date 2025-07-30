@@ -46,15 +46,8 @@ export default function ChatWindow() {
         try {
             await streamResponse(
                 input,
-                (chunk) => {
-                    setMessages(prev => prev.map(msg =>
-                        msg.id === assistantMessage.id ? {...msg, content: chunk} : msg
-                    ));
-                },
-                () => {
-                    // Finalize message on complete
-
-                }
+                (chunk) => {setMessages(prev => prev.map(msg => msg.id === assistantMessage.id ? {...msg, content: chunk} : msg));},
+                () => {}
             );
         } catch (error) {
             setMessages(prev => prev.map(msg => msg.id === assistantMessage.id ? {...msg, content: content + '\n\n[Response interrupted]'} : msg));
