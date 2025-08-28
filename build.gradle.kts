@@ -22,7 +22,9 @@ repositories {
 dependencies {
 	implementation(platform("org.springframework.ai:spring-ai-bom:1.0.0"))
 	implementation("org.springframework.ai:spring-ai-starter-model-deepseek")
+	implementation("org.springframework.ai:spring-ai-starter-mcp-server")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
