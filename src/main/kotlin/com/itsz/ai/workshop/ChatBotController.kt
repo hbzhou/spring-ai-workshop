@@ -1,5 +1,6 @@
 package com.itsz.ai.workshop
 
+import com.itsz.ai.workshop.tools.DateTimeTool
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.reactive.asFlow
 import org.springframework.ai.chat.client.ChatClient
@@ -15,8 +16,8 @@ class ChatBotController(chatModel: ChatModel) {
     private val chatClient = ChatClient.create(chatModel)
 
     @GetMapping("/chat")
-    fun chat(@RequestParam prompt: String): String? = chatClient.prompt().user(prompt).call().content()
+    fun chat(@RequestParam prompt: String): String? = chatClient.prompt().user(prompt).tools(DateTimeTool()).call().content()
 
     @GetMapping("/stream")
-    fun streamChat(@RequestParam prompt: String): Flow<String> = chatClient.prompt().user(prompt).stream().content().asFlow()
+    fun streamChat(@RequestParam prompt: String): Flow<String> = chatClient.prompt().user(prompt).tools(DateTimeTool()).stream().content().asFlow()
 }

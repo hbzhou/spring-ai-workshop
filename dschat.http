@@ -1,8 +1,8 @@
 ### GET request to example server
-GET http://localhost:8080/api/ds/chat?prompt=Tell me a interesting fact about Kotlin
+GET http://localhost:8080/api/chatbot/chat?prompt=what date is tomorrow?
 
 ### chat client streaming response
-GET http://localhost:8080/api/ds/stream?prompt=Tell me a interesting fact about Kotlin
+GET http://localhost:8080/api/chatbot/stream?prompt=Tell me a interesting fact about Kotlin
 
 ### structured output
 GET http://localhost:8080/api/structure-output/actorFilms?actor=Tom+Hanks
