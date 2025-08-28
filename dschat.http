@@ -3,3 +3,9 @@ GET http://localhost:8080/api/ds/chat?prompt=Tell me a interesting fact about Ko
 
 ### chat client streaming response
 GET http://localhost:8080/api/ds/stream?prompt=Tell me a interesting fact about Kotlin
+
+### structured output
+GET http://localhost:8080/api/structure-output/actorFilms?actor=Tom+Hanks
+
+### multiModels
+GET http://localhost:8080/api/multi-model/picture-content
