@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "weather-mcp-server": {
+      "type": "sse",
+      "url": "http://localhost:8080/sse",
+      "reconnect": true,
+      "timeout": 3000
+    }
+  }
+}

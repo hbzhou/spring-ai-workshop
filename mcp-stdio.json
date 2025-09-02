@@ -1,0 +1,15 @@
+{
+  "mcpVersion": "2024-11-05",
+  "servers": {
+    "java-mcp-server": {
+      "command": "java",
+      "args": [
+        "-jar",
+        "./build/libs/mcp-server-1.0.0.jar"
+      ],
+      "env": {
+        "JAVA_OPTS": "-Xmx512m"
+      }
+    }
+  }
+}
