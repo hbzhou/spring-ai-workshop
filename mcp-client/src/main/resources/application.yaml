@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: mcp-client
+  ai:
+    mcp:
+      client:
+        enabled: true
+        #        stdio:
+        #          servers-configuration: classpath:mcp-stdio.json
+        sse:
+          connections:
+            server:
+              url: http://localhost:8081
+              sse-endpoint: /sse
+
+    deepseek:
+      api-key: ${DS_API_KEY}
+
+server:
+  port: 8082

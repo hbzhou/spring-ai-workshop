@@ -1,0 +1,5 @@
+### GET request to example server
+GET http://localhost:8082/api/chatbot/chat?prompt=what date is tomorrow?
+
+### chat client streaming response
+GET http://localhost:8082/api/chatbot/stream?prompt=what's the weather like in beijing today?
